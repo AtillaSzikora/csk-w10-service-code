@@ -50,5 +50,6 @@ jobs:
         env:
           IMAGE: ${{ vars.ECR_REPOSITORY_URL }}:${{ steps.version.outputs.version }}
         run: |
-          docker build --tag "$IMAGE" .
+          docker build --tag asd123:1 .
+          docker tag asd123:1 "$IMAGE"
           docker push "$IMAGE"
